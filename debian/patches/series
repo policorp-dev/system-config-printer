@@ -2,6 +2,4 @@
 0007-fix-pk-package-name.patch
 Allow-installing-packages-from-OpenPrinting.patch
 Do-not-autostart-the-applet-on-LXDE-or-Unity.patch
-Show-Printer-Settings-in-Unity-Control-Center.patch
 makefile-am-fix-setup-py-install.patch
-POLICORP-add-Session.patch
