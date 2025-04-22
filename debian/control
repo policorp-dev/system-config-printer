@@ -2,7 +2,7 @@ Source: system-config-printer
 Section: gnome
 Priority: optional
 Maintainer: Edson Juliano Drosdeck <edson@policorp.com.br>
-Build-Depends: debhelper (>= 13.11.6),
+Build-Depends: debhelper (>= 13.11.4),
                debhelper-compat (= 13),
                dh-sequence-gnome,
                dh-sequence-python3,
