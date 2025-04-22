@@ -3,3 +3,4 @@
 Allow-installing-packages-from-OpenPrinting.patch
 Do-not-autostart-the-applet-on-LXDE-or-Unity.patch
 makefile-am-fix-setup-py-install.patch
+POLICORP-edit-categories.patch

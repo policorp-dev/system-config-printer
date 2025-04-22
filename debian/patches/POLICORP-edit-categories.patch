@@ -1,0 +1,12 @@
+Index: system-config-printer/Makefile.am
+===================================================================
+--- system-config-printer.orig/Makefile.am
++++ system-config-printer/Makefile.am
+@@ -250,7 +250,6 @@ install-desktopDATA: $(desktop_DATA)
+ 	desktop-file-install $(DESKTOP_VENDOR)	\
+ 	  --dir $(DESTDIR)$(desktopdir)		\
+ 	  --add-category System			\
+-	  --add-category Settings		\
+ 	  --add-category HardwareSettings	\
+ 	  --add-category Printing		\
+ 	  --add-category GTK			\
