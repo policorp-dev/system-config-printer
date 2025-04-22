@@ -1,0 +1,4 @@
+debug.py usr/lib/python3/dist-packages/cupshelpers/
+etc/cupshelpers/
+smburi.py usr/lib/python3/dist-packages/cupshelpers/
+usr/lib/python3*/*-packages/cupshelpers*

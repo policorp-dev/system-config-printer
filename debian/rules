@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,-O1 -Wl,-z,defs
+
+%:
+# We need to force the build system to autoconf otherwise for some reasons it
+# tries to run the python_distutils one
+	dh $@ --buildsystem=autoconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- --with-udev-rules \
+		             --with-udevdir=/usr/lib/udev \
+		             --with-systemdsystemunitdir=/usr/lib/systemd/system \
+			     --with-cups-serverbin-dir=/usr/lib/cups
+
+override_dh_python3:
+	dh_python3 -ppython3-cupshelpers
+	dh_python3 -psystem-config-printer /usr/share/system-config-printer/
+	dh_python3 -psystem-config-printer-common /usr/share/system-config-printer/
+
+override_dh_autoreconf:
+	dh_autoreconf ./bootstrap
+
+execute_after_dh_clean:
+	rm -f dbus/org.fedoraproject.Config.Printing.service
+
+# Install the apport hook on Ubuntu
+# python3-smbc can't be installed by default on Ubuntu while it is in 'universe'
+ifeq (yes,$(shell dpkg-vendor --derives-from Ubuntu && echo yes))
+execute_after_dh_install:
+	dh_install -psystem-config-printer-common debian/source_system-config-printer.py \
+		usr/share/apport/package-hooks/
+
+override_dh_gencontrol:
+	dh_gencontrol -- \
+		-Vpysmbc:Suggests="python3-smbc"
+else
+override_dh_gencontrol:
+	dh_gencontrol -- \
+		-Vpysmbc:Recommends="python3-smbc"
+endif
+
+override_dh_gnome_clean:
+
+# We need a refreshed .pot file since the Ubuntu changes include translatable strings
+override_dh_translations:
+	rm -f po/system-config-printer.pot
+	dh_translations --domain=system-config-printer

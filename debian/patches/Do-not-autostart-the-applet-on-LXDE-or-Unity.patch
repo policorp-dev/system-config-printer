@@ -1,0 +1,22 @@
+From: Jeremy Bicha <jeremy.bicha@canonical.com>
+Date: Thu, 2 Jun 2016 14:41:48 +0200
+Subject: Do not autostart the applet on LXDE or Unity
+
+Don't launch the applet in LXDE, until LP: #323322 is fixed. (LP: #529472)
+Don't autostart the applet in Unity either
+---
+ print-applet.desktop.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/print-applet.desktop.in b/print-applet.desktop.in
+index 1bc003f..cdc070e 100644
+--- a/print-applet.desktop.in
++++ b/print-applet.desktop.in
+@@ -5,6 +5,6 @@ Exec=system-config-printer-applet
+ Terminal=false
+ Type=Application
+ Icon=printer
+-NotShowIn=KDE;GNOME;Cinnamon;
++NotShowIn=KDE;GNOME;Cinnamon;LXDE;Unity;
+ StartupNotify=false
+ X-GNOME-Autostart-Delay=30
