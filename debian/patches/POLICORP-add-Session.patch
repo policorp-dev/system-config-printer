@@ -1,0 +1,13 @@
+Index: system-config-printer/system-config-printer.desktop.in
+===================================================================
+--- system-config-printer.orig/system-config-printer.desktop.in
++++ system-config-printer/system-config-printer.desktop.in
+@@ -9,7 +9,7 @@ Type=Application
+ Icon=printer
+ StartupNotify=true
+ X-Ubuntu-Gettext-Domain=system-config-printer
+-Categories=GNOME;GTK;Settings;HardwareSettings;X-GNOME-Settings-Panel;X-Unity-Settings-Panel;
++Categories=GNOME;GTK;Settings;HardwareSettings;X-GNOME-Settings-Panel;X-Unity-Settings-Panel;System;
+ X-GNOME-Settings-Panel=printing
+ X-Unity-Settings-Panel=printing
+ Keywords=Printer;Queue;Print;Paper;Ink;Toner;
