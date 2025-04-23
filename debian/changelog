@@ -1,3 +1,9 @@
+system-config-printer (1.5.Policorp-18.5) unstable; urgency=medium
+
+  * fix categories
+
+ -- Edson Juliano Drosdeck <edson@policorp.com.br>  Wed, 23 Apr 2025 18:34:57 +0000
+
 system-config-printer (1.5.18-4) unstable; urgency=medium
 
   * Add Build-Depends: python3-setuptools (Closes: #1080811)
