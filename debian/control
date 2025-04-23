@@ -1,8 +1,12 @@
 Source: system-config-printer
 Section: gnome
 Priority: optional
-Maintainer: Edson Juliano Drosdeck <edson@policorp.com.br>
-Build-Depends: debhelper (>= 13.11.4),
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Jeremy Bícha <jbicha@ubuntu.com>,
+           Guido Günther <agx@sigxcpu.org>,
+           Dmitry Shachnev <mitya57@debian.org>,
+           Laurent Bigonville <bigon@debian.org>
+Build-Depends: debhelper (>= 13.11.6),
                debhelper-compat (= 13),
                dh-sequence-gnome,
                dh-sequence-python3,
@@ -16,6 +20,8 @@ Build-Depends: debhelper (>= 13.11.4),
                xmlto
 Standards-Version: 4.7.0
 Rules-Requires-Root: no
+Vcs-Browser: https://salsa.debian.org/gnome-team/system-config-printer
+Vcs-Git: https://salsa.debian.org/gnome-team/system-config-printer.git
 Homepage: https://github.com/OpenPrinting/system-config-printer
 
 Package: system-config-printer
