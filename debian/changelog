@@ -1,8 +1,8 @@
 system-config-printer (1.5.Policorp-18.5) unstable; urgency=medium
 
-  * Added Session system
+  * fix categories
 
- -- Edson Juliano Drosdeck <edson@policorp.com.br>  Tue, 22 Apr 2025 15:00:08 +0000
+ -- Edson Juliano Drosdeck <edson@policorp.com.br>  Wed, 23 Apr 2025 18:34:57 +0000
 
 system-config-printer (1.5.18-4) unstable; urgency=medium
 
